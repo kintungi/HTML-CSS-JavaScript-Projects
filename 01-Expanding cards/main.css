@@ -1,0 +1,71 @@
+/* import roboto font from google fonts here below*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("headway-F2KRf_QfCqw-unsplash.jpg");
+}
+.container {
+    width: 80vw;
+    height: 90vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+.panel {
+    height: 100%;
+    /* background-color: aliceblue; */
+    flex: 0.5;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* display: relative; */
+    color: white;
+    border: solid 2px white;
+    border-radius: 50px;
+    margin-left: 32px;
+    display: grid;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out ;
+
+}
+.panel.active {
+    flex: 8;
+}
+h3 {
+    display: absolute;
+    top: 100px;
+    margin: auto auto;
+    opacity: 0;
+    transition: ease-in-out all 0.2s;
+}
+
+h3.active {
+    opacity: 1;
+}
+
+.panel:nth-of-type(1) {
+    background-image: url("headway-F2KRf_QfCqw-unsplash.jpg");
+    margin-left: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .panel:nth-of-type(5),
+    .panel:nth-of-type(4) {
+        display: none;
+    }
+}
+
