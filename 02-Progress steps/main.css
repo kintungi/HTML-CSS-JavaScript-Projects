@@ -1,0 +1,113 @@
+/* import roboto font from google fonts here below*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --line-border-fill: #3498db;
+    --line-border-empty: #e0e0e0;
+    --height-circle: 30px;
+    --width-circle: 30px;
+    --transition-circle: 0.4s ease;
+    --border-radius-button: 6px;
+    --padding-button: 8px 30px;
+    --margin-button: 5px;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f6f7fb;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+.container {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    align-items: center; 
+    text-align: center;
+}
+.progress-container {
+    display: flex;
+    flex-flow: row;
+    max-width: 100%; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 350px;
+    position: relative;
+
+}
+.progress {
+    background-color: var(--line-border-fill);
+    height: 4px;
+    width: 0%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 0.4s ease;
+}
+.progress-container::before {
+    content: "";
+    background-color: var(--line-border-empty);
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.circle {
+    background-color: #fff;
+    color: #999;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: grid;
+    place-items: center;
+    border: 3px solid var(--line-border-empty);
+    transition: .4s ease;
+}
+
+.circle.active {
+    border-color: var(--line-border-fill)
+}
+
+.button {
+    background-color: var(--line-border-fill);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+    width: 120px;
+    text-align: center;
+    /* text-transform: uppercase; */
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+.button:focus {
+    outline: 0;
+}
+.button:disabled {
+    cursor: not-allowed;
+    background-color: var(--line-border-empty);
+}
