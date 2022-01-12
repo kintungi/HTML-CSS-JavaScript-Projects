@@ -34,6 +34,7 @@ body {
     position: fixed;
     top: -100px;
     left: -100px;
+    z-index: 300;
 }
 .circle {
     background-color: #ff7979;
