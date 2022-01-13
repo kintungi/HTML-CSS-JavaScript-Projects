@@ -42,4 +42,14 @@ body {
 .clear {
     filter: blur(0);
 }
+.greeting {
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; 
+}
 
+.greeting.show {
+    opacity: 1;
+}

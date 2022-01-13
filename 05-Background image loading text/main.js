@@ -24,7 +24,7 @@ it reaches 100.
 
 
 
-let intv = setInterval(blurring, 30);
+let intv = setInterval(blurring, 60);
     // removeBlur();
 
 
@@ -44,6 +44,8 @@ function blurring() {
     
    if (load === 100) {
        console.log("welcome");
+       let greeting = document.querySelector(".greeting");
+       setTimeout(() => greeting.classList.add("show"), 1000);
    }
     
 }
