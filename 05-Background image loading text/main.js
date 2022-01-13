@@ -55,3 +55,7 @@ function scale (number, inMin, inMax, outMin, outMax) {
     return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 }
 
+/*https://stackoverflow.com/questions/10756313/
+javascript-jquery-map-a-range-of-numbers-to-ano
+ther-range-of-numbers*/
+
