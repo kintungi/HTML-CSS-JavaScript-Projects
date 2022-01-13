@@ -1,0 +1,45 @@
+/* import roboto font from google fonts here below*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    /* flex-flow: column; */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg {
+    background: url(dewang-gupta-ESEnXckWlLY-unsplash.jpg)
+    /* beige */
+    no-repeat center center / cover;
+    position: absolute;
+    top: -30px;/*This is added to reduce the white color caused by the blur effect*/
+    left: -30px;
+    width: calc(100vw + 60px);/*To center the image so that the effect is reduced evenly*/
+    height: calc(100vh + 60px);
+    z-index: -10;
+    filter: blur(30px);
+    display: grid;
+    /* transition: filter 3000s ease; */
+    /* place-items: center; */
+
+}
+
+.loading-text {
+    font-size: 100px;
+    color: #fff;
+}
+
+.clear {
+    filter: blur(0);
+}
+
