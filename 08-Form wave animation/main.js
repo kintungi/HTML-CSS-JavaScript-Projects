@@ -8,9 +8,16 @@ labels.forEach(label => {
     </span>`)
     .join("")//join array items into a string
     
-    label.addEventListener("click", () => label.parentNode.firstChild.input())
+    label.addEventListener("click", () => label.parentNode.firstChild.focus());
+    //When you click on the label, you should be able to type on the input
+    //console.log(label.parentNode.firstChild)
 
-    // console.log(labels[2].innerHTML)
+    label.addEventListener("mouseover", () => label.style.cursor = "text");
+    //When you hover over a label cursor should indicate that it is just a placeholder and that you can start typing
+
+    label.parentNode.firstChild.addEventListener("focus", () => label.classList.add("float"));
+    //If the input is in focus and the label is floating, deactivate cursor on the label
+    
 })
 
 

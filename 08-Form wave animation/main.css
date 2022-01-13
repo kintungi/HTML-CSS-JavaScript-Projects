@@ -50,6 +50,7 @@ body {
 
 .btn:focus {
     outline: 0;
+    cursor:
 }
 
 .btn:active {
@@ -83,10 +84,15 @@ body {
     border-bottom-color: lightblue;
 }
 
+
 .form-control label {
     position: absolute;
     top: 15px;
     left: 0;
+}
+
+label.float {
+    cursor: unset;
 }
 
 /*after js spanning*/
