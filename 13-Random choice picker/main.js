@@ -7,7 +7,7 @@ textarea.focus();
 textarea.addEventListener("keyup", (e) => {
     let target = e.target;
 
-    console.log(target.value);
+    // console.log(target.value);
     createTags(target.value);
 
     if(e.code === "Enter") {
@@ -25,8 +25,8 @@ let tags = value.split(",") //split the string using a comma(,) delimeter
 .map((tag) => tag.trim())//remove white space around any item of a tag
 .filter(tag => tag !== "")//remove empty tags
 // .filter(tag => tag.trim() !== "")
-// .filter()
-console.log(tags)
+
+// console.log(tags)
 
 elTags.innerHTML = "";//clear the element to avoid piling up
 
