@@ -2,7 +2,7 @@ const boxes = document.querySelectorAll(".box");
 
 window.addEventListener("scroll", checkBoxes);
 
-checkBoxes();
+checkBoxes();//this function is called twice, on load and on scroll
 
 function checkBoxes() {
     // console.log(window.innerHeight )
