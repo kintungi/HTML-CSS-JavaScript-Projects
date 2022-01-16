@@ -19,7 +19,7 @@ counters.forEach(counter => {
 
             setTimeout(updateCounter, 1);//This makes the counter delay by one ms before firing otherwise you won't see the effect, it will complete at a speed of light
         }//To alter the speed of the counter don't increase the timing here, instead increase the target divider in the increment
-    
+        //The effect is achieved through recursion, the function calling itself until a condition is met.
     }
     updateCounter() 
     
